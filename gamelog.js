@@ -9,4 +9,22 @@ let games = [
         {name : "Digimon Time Stranger", status: "done", hours: 50},
 ]
 
-console.log(gameList);
+function render(){
+    gameList.innerHTML = "";
+    games.forEach((game) => {
+        let gameCard = document.createElement("div");
+        gameCard.className = "gameCard"
+        gameList.append(gameCard);
+        let gameName = document.createElement("p");
+        gameName.textContent = game.name;
+        gameCard.append(gameName);
+        let gameStatus = document.createElement("p");
+        gameStatus.textContent = game.status;
+        gameCard.append(gameStatus);
+        let gameHours = document.createElement("p");
+        gameHours.textContent = game.hours + "h";
+        gameCard.append(gameHours);
+    } )
+}
+
+render();

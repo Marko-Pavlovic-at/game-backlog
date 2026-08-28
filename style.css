@@ -6,3 +6,15 @@ body{
 h1{
     text-align: center;
 }
+
+#gameList{
+    /*css grid */
+}
+
+.gameCard{
+    border: 1px solid black;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    background-color: rgb(27, 24, 53);
+}
