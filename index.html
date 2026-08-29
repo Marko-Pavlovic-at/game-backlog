@@ -7,8 +7,34 @@
     <title>Game-Backlog</title>
 </head>
 <body>
+    <div id="modalOverlay">
+        <div id="modal">
+            <div id="modalHeader">
+                <h1>Add a Game</h1>
+            </div>
+            <div id="modalContent">
+                <form>
+                    <label for="nameInput">Name :</label>
+                    <input type="text" id="nameInput" name="nameInput">
+                    <label for="statusInput">Status: </label>
+                    <input type="text" id="statusInput" name="statusInput">
+                    <label for="hoursInput">Hours Played</label>
+                    <input type="number" id="hoursInput" name="hoursInput">
+                </form>
+            </div id="modalFooter">
+            <button id="closeBtn">Close</button>
+        </div>
+    </div>
     <header>
+        <div id="headerBtns">
+            <button id="addGameBtn">Add Game</button>
+        </div>
+        
         <h1>Game-Backlog</h1>
+        
+        <form id="addGameForm">
+            <p>Input goes here</p>
+        </form>
     </header>
     <main>
         <div id="gameList"></div>

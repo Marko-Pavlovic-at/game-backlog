@@ -10,8 +10,20 @@
 
 
 2. 
-    - use CSS Grid 
-    - cards should be next to each other 3 top 2 bottom
+    - use CSS Grid DONE
+    - cards should be next to each other 3 top 2 bottom DONE
+
+3. 
+    - addGame Button top right corner DONE
+    - build a form in HTML with Game Name Status and Hours Played and Add Button set it to display none
+    - use js to show it on button click
+    - hides it on add Button
+    - Style it
+    - Grab Dom Elements
+    - push values on button click
+    - use render in button
+    - clear inputs after submit
+    - reject empty inputs with error message
 
 
     notes: 
@@ -20,6 +32,8 @@
     the laptop keyboard is weird need to fix it <> is fn + L but fn + shift + L is also screenshot so i cant do > in js since its the same
 
 i need a container for each card otherwise i cant style it in css properly
+
+---
 
 CSS Grid
 
@@ -65,3 +79,23 @@ this looks the best bit is weird since when i have full page on a big screen i o
 
 tried different fr but nothing changes
 rem also not much different but settled for 15rem instead of 200px
+
+
+---
+
+i put the add button in the header in a container reason the sort buttons later go here as well
+
+i want to research how to make a pop up modal
+
+needs a pop up overlay
+for some reason the overlay dosent cover the whole page
+margin should be in child not parent when using flex otherwise body behaves weird
+i added a modal div in the overlay div set the size and centered it with flexbox
+
+now i hide the modal overlay
+
+grab overlay and button in js 
+declare showmodal as a function
+call it on button click
+
+modal shows up

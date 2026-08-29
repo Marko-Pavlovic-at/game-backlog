@@ -1,5 +1,14 @@
 
 const gameList = document.querySelector("#gameList");
+const addGameBtn = document.querySelector("#addGameBtn");
+const modalOverlay = document.querySelector("#modalOverlay");
+
+
+const showModal = () =>{
+    modalOverlay.style.display = "flex";
+}
+
+addGameBtn.addEventListener("click", showModal);
 
 let games = [
     {name : "Elden Ring", status: "done", hours: 200},
