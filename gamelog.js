@@ -16,13 +16,13 @@ function render(){
         gameCard.className = "gameCard"
         gameList.append(gameCard);
         let gameName = document.createElement("p");
-        gameName.textContent = game.name;
+        gameName.textContent = `Name: ${game.name}`
         gameCard.append(gameName);
         let gameStatus = document.createElement("p");
-        gameStatus.textContent = game.status;
+        gameStatus.textContent = `Status: ${game.status}`;
         gameCard.append(gameStatus);
         let gameHours = document.createElement("p");
-        gameHours.textContent = game.hours + "h";
+        gameHours.textContent = `Time Played: ${game.hours}h`;
         gameCard.append(gameHours);
     } )
 }
