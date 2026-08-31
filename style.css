@@ -84,12 +84,13 @@ h1{
     max-width: 25rem;
     width: 100%;
     background: brown;
-    height: 20rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    border-radius: 1rem;
 }
 
 form{
@@ -106,4 +107,12 @@ input{
 select{
      background-color: rgb(74, 22, 22);
     color: aliceblue;
+}
+
+#errorMsg{
+    color: red;
+    background: rgb(175, 152, 152);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: none;
 }

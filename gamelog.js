@@ -7,6 +7,8 @@ const nameInput = document.querySelector("#nameInput");
 const statusInput = document.querySelector("#statusInput");
 const hoursInput = document.querySelector("#hoursInput");
 const submitBtn = document.querySelector("#submitBtn");
+const errorMsg = document.querySelector("#errorMsg");
+
 
 
 const closeModal = () =>{
@@ -27,15 +29,24 @@ let games = [
 
 
 const createCard = () => {
-    games.push(
+
+
+        games.push(
         {name : nameInput.value,
          status: statusInput.value,
          hours:  hoursInput.value  
         }
+        
     )
+    errorMsg.style.display = "none";
+
 }
 
 submitBtn.addEventListener("click", function(){
+        if(nameInput.value === "" | statusInput.value === "" | hoursInput.value === ""){
+        errorMsg.style.display = "block";
+        return;
+    }
     createCard();
     closeModal();
     render();
@@ -48,7 +59,10 @@ submitBtn.addEventListener("click", function(){
 
 
 
-closeBtn.addEventListener("click", closeModal);
+closeBtn.addEventListener("click", function(){
+    closeModal();
+    errorMsg.style.display = "none";
+})
 
 addGameBtn.addEventListener("click", showModal);
 
