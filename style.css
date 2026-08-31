@@ -38,13 +38,34 @@ h1{
     
 }
 
-#addGameBtn{
+.blueBtn{
     background-color: rgb(73, 73, 207);
     color: aliceblue;
+
+}
+
+.btn{
     border: none;
     border-radius: 10px;
     padding: 0.5rem;
     margin: 1rem;
+    transition-duration: 0.5s;
+}
+
+.btn:hover{
+    background-color: rgb(31, 27, 27);
+}
+
+
+
+.grayBtn{
+    background-color: rgb(85, 81, 81);
+    color: white;
+}
+
+.blueBtn{
+    background-color: rgb(38, 75, 179);
+    color: aliceblue;
 }
 
 #modalOverlay{
@@ -71,3 +92,18 @@ h1{
     gap: 1rem;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input{
+    background-color: rgb(74, 22, 22);
+    color: aliceblue;
+}
+
+select{
+     background-color: rgb(74, 22, 22);
+    color: aliceblue;
+}

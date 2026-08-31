@@ -99,3 +99,7 @@ declare showmodal as a function
 call it on button click
 
 modal shows up
+add close button 
+
+
+- honest note followed a tutorial https://dev.to/rajatamil/make-pop-up-modal-window-in-vanilla-javascript-4dd2
