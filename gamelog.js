@@ -20,11 +20,7 @@ const showModal = () =>{
 }
 
 let games = [
-    {name : "Elden Ring", status: "done", hours: 200},
-     {name : "Wuthering Waves", status: "playing", hours: 700},
-      {name : "Omori", status: "backlog", hours: 0},
-       {name : "Rocket League", status: "backlog", hours: 1000},
-        {name : "Digimon Time Stranger", status: "done", hours: 50},
+   
 ]
 
 
@@ -34,7 +30,7 @@ const createCard = () => {
         games.push(
         {name : nameInput.value,
          status: statusInput.value,
-         hours:  hoursInput.value  
+         hours:  Number(hoursInput.value)  
         }
         
     )
@@ -43,7 +39,7 @@ const createCard = () => {
 }
 
 submitBtn.addEventListener("click", function(){
-        if(nameInput.value === "" | statusInput.value === "" | hoursInput.value === ""){
+        if(nameInput.value === "" || statusInput.value === "" || hoursInput.value === ""){
         errorMsg.style.display = "block";
         return;
     }
