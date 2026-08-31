@@ -2,13 +2,20 @@
 const gameList = document.querySelector("#gameList");
 const addGameBtn = document.querySelector("#addGameBtn");
 const modalOverlay = document.querySelector("#modalOverlay");
+const closeBtn = document.querySelector("#closeBtn");
+const nameInput = document.querySelector("#nameInput");
+const statusInput = document.querySelector("#statusInput");
+const hoursInput = document.querySelector("#hoursInput");
+const submitBtn = document.querySelector("#submitBtn");
 
+
+const closeModal = () =>{
+    modalOverlay.style.display = "none";
+}
 
 const showModal = () =>{
     modalOverlay.style.display = "flex";
 }
-
-addGameBtn.addEventListener("click", showModal);
 
 let games = [
     {name : "Elden Ring", status: "done", hours: 200},
@@ -17,6 +24,34 @@ let games = [
        {name : "Rocket League", status: "backlog", hours: 1000},
         {name : "Digimon Time Stranger", status: "done", hours: 50},
 ]
+
+
+const createCard = () => {
+    games.push(
+        {name : nameInput.value,
+         status: statusInput.value,
+         hours:  hoursInput.value  
+        }
+    )
+}
+
+submitBtn.addEventListener("click", function(){
+    createCard();
+    closeModal();
+    render();
+    nameInput.value = "";
+    statusInput.value = ""
+    hoursInput.value = ""
+
+});
+
+
+
+
+closeBtn.addEventListener("click", closeModal);
+
+addGameBtn.addEventListener("click", showModal);
+
 
 function render(){
     gameList.innerHTML = "";

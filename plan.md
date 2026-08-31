@@ -15,10 +15,10 @@
 
 3. 
     - addGame Button top right corner DONE
-    - build a form in HTML with Game Name Status and Hours Played and Add Button set it to display none
-    - use js to show it on button click
-    - hides it on add Button
-    - Style it
+    - build a form in HTML with Game Name Status and Hours Played and Add Button set it to display none DONE
+    - use js to show it on button click DONE
+    - hides it on close Button DONE
+    - Style it DONE
     - Grab Dom Elements
     - push values on button click
     - use render in button
