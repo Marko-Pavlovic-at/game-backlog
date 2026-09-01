@@ -31,6 +31,9 @@
     - call the button inside render because it dosent exist outside of it  DONE
     - write a filter function that removes data from the array DONE
   
+  5. Local Storage
+    - Load at startup
+    - Save on push
 
     notes: 
     i have to look up foreach syntax

@@ -10,6 +10,13 @@ const submitBtn = document.querySelector("#submitBtn");
 const errorMsg = document.querySelector("#errorMsg");
 
 
+let games = [
+   
+]
+const userData = JSON.parse(localStorage.getItem("data"));
+
+
+
 
 const closeModal = () =>{
     modalOverlay.style.display = "none";
@@ -19,9 +26,7 @@ const showModal = () =>{
     modalOverlay.style.display = "flex";
 }
 
-let games = [
-   
-]
+
 
 
 const createCard = () => {
@@ -35,7 +40,12 @@ const createCard = () => {
         }
         
     )
+    localStorage.setItem("data", JSON.stringify(games));
     errorMsg.style.display = "none";
+    
+    
+    
+
 
 }
 
@@ -45,11 +55,14 @@ submitBtn.addEventListener("click", function(){
         return;
     }
     createCard();
+    
     closeModal();
     render();
     nameInput.value = "";
     statusInput.value = ""
     hoursInput.value = ""
+    
+
     
 
 });
@@ -94,7 +107,10 @@ function render(){
             
 
     })
+    
+    
     } )
+    
 
 
     
