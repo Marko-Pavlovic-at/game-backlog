@@ -68,6 +68,11 @@ h1{
     color: aliceblue;
 }
 
+.redBtn{
+    background-color: rgb(202, 95, 95);
+    color: aliceblue;
+}
+
 #modalOverlay{
 
     width: 100%;

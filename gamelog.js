@@ -78,6 +78,11 @@ function render(){
         let gameHours = document.createElement("p");
         gameHours.textContent = `Time Played: ${game.hours}h`;
         gameCard.append(gameHours);
+        let delBtn = document.createElement("button")
+        delBtn.id  = "delBtn";
+        delBtn.className = "btn redBtn";
+        delBtn.textContent = "Delete";
+        gameCard.append(delBtn);
     } )
 }
 
