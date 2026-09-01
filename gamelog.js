@@ -50,7 +50,7 @@ submitBtn.addEventListener("click", function(){
     nameInput.value = "";
     statusInput.value = ""
     hoursInput.value = ""
-    console.log(games);
+    
 
 });
 
@@ -83,16 +83,13 @@ function render(){
         gameHours.textContent = `Time Played: ${game.hours}h`;
         gameCard.append(gameHours);
         let delBtn = document.createElement("button")
-        delBtn.id  = "delBtn";
         delBtn.className = "btn redBtn";
         delBtn.textContent = "Delete";
         gameCard.append(delBtn);
 
 
         delBtn.addEventListener("click", function(){
-            console.log("clicked");
-            console.log(game.id);
-            games = games.filter(item => item.id !== item.id);
+            games = games.filter(item => item.id !== game.id);
             render();
             
 
