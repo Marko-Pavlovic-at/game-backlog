@@ -30,7 +30,8 @@ const createCard = () => {
         games.push(
         {name : nameInput.value,
          status: statusInput.value,
-         hours:  Number(hoursInput.value)  
+         hours:  Number(hoursInput.value),
+         id: Date.now()
         }
         
     )
@@ -49,6 +50,7 @@ submitBtn.addEventListener("click", function(){
     nameInput.value = "";
     statusInput.value = ""
     hoursInput.value = ""
+    console.log(games);
 
 });
 
@@ -61,6 +63,8 @@ closeBtn.addEventListener("click", function(){
 })
 
 addGameBtn.addEventListener("click", showModal);
+
+
 
 
 function render(){
@@ -83,7 +87,20 @@ function render(){
         delBtn.className = "btn redBtn";
         delBtn.textContent = "Delete";
         gameCard.append(delBtn);
+
+
+        delBtn.addEventListener("click", function(){
+            console.log("clicked");
+            console.log(game.id);
+            games = games.filter(item => item.id !== item.id);
+            render();
+            
+
+    })
     } )
+
+
+    
 }
 
 render();

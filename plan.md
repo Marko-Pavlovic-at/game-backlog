@@ -26,11 +26,11 @@
     - reject empty inputs with error message DONE
 
 4. Delete Logic
-    - each card should be rendered with a delete button create it in JS give it a class set textcontent append it and style it
-    - the data needs ids declare them by date.now
-    - call the button inside render because it dosent exist outside of it 
-    - write a filter function that removes data from the array
-    - try it not sure if need to call render again dosent make sense to call render inside of render but the delbtn will only exist in render so i cant write it outside unless i find a way to export the values from render
+    - each card should be rendered with a delete button create it in JS give it a class set textcontent append it and style it DONE
+    - the data needs ids declare them by date.now DONE
+    - call the button inside render because it dosent exist outside of it  DONE
+    - write a filter function that removes data from the array DONE
+  
 
     notes: 
     i have to look up foreach syntax
