@@ -112,3 +112,37 @@ add close button
 
 
 - honest note followed a tutorial https://dev.to/rajatamil/make-pop-up-modal-window-in-vanilla-javascript-4dd2
+
+
+---
+Local Storage
+
+What should happen?
+
+Page loads LS is empty nothing shows
+when something is loaded into the Array i need setItem to save the new Array in LS meaning after push so in the submitbtn after the create card function
+localstorage.set item has an key and a value the key is whatever i will use data and the value needs to be my Array as a string.
+for that i will first create an variable and store the object as a string to later use it in the ls.setitem line.
+
+what do i have now? 
+- a variable at startup that saves the empty array
+- i fill the array in submit button so the stringfied data should now live in LS
+
+for some reason the object created is empty
+i try to create it after the push
+
+okay now it saves correctly now i need to retreive the date at startup
+
+first i need to take the string and use parse
+
+i did parse the string but i dont see it in the dom
+
+no matter if i put it on startup or at render it dosent show up but its showed in ls
+
+no matter what i try nothing works i feel like i am just one step away but i dont know what it is
+
+i need to use the coverted data and push it to the array either in or before render
+
+okay the push needs to stay after the innerhtml line in render just the data shape is wrong
+
+The parsed value is Object Object

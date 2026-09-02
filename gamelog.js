@@ -13,10 +13,10 @@ const errorMsg = document.querySelector("#errorMsg");
 let games = [
    
 ]
-const userData = JSON.parse(localStorage.getItem("data"));
 
-
-
+let retrievedData = localStorage.getItem("data");
+let convertedData = JSON.parse(retrievedData);
+games = convertedData;
 
 const closeModal = () =>{
     modalOverlay.style.display = "none";
@@ -40,7 +40,7 @@ const createCard = () => {
         }
         
     )
-    localStorage.setItem("data", JSON.stringify(games));
+    
     errorMsg.style.display = "none";
     
     
@@ -56,7 +56,9 @@ submitBtn.addEventListener("click", function(){
     }
     createCard();
     
+localStorage.setItem("data", JSON.stringify(games));
     closeModal();
+
     render();
     nameInput.value = "";
     statusInput.value = ""
@@ -81,8 +83,13 @@ addGameBtn.addEventListener("click", showModal);
 
 
 function render(){
+   
+    
     gameList.innerHTML = "";
+    
+       
     games.forEach((game) => {
+       
         let gameCard = document.createElement("div");
         gameCard.className = "gameCard"
         gameList.append(gameCard);
@@ -103,6 +110,7 @@ function render(){
 
         delBtn.addEventListener("click", function(){
             games = games.filter(item => item.id !== game.id);
+          localStorage.setItem("data", JSON.stringify(games));
             render();
             
 
